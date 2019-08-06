@@ -1,0 +1,68 @@
+<html>
+<head>
+<meta charset = "UTF-8">
+<%= javascript_include_tag 'application' %>
+</head>
+<header><h1>WELCOME TO TWITTER CLONE APPLICATION</h1>
+<%= render "layouts/navbar" %>
+<%= yield %>
+</header>
+<body>
+<table class = "grid">
+  <tr>
+    <td>
+      <div class="grid-item"> <img  src="assets/p1.png" > <br><p>john </p></div>
+    </td>
+    <td>
+      <div class="grid-item"> <img  src="assets/p2.png" ><p>peter </p></div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="grid-item"> <img  src="assets/p3.jpg" ><p>Yves </p></div>
+    </td>
+    <td>
+      <div class="grid-item"><img  src="assets/p4.jpg" > <p>Jacque </p></div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="grid-item"><img  src="assets/p6.jpg" ><p>David </p></div>
+    </td>
+    <td>
+      <div class="grid-item"> <img  src="assets/p8.jpg" ><p>Paul </p></div>
+    <td>
+  </tr>
+</table>
+
+<h1>All Tweets</h1>
+<p><%= notice %></p>
+<table>
+  <tr>
+    <th>Tweet</th>
+    <th>send on</th></th>
+    <th colspan="3">more actions</th></th>
+  </tr>
+
+  <% Twee.all.each do |twee| %>
+    <tr>
+      <td><%= twee.content %></td>
+      <td><%=twee.created_on %></td>
+      <td><%= link_to ' View Tweet ', twee_path(twee.id) %></td>
+      <td><%= link_to ' Edit Tweet ', edit_twee_path(twee.id) %></td>
+      <td><%= link_to "Delete Tweet", twee_path(twee.id), method: :delete ,data: { confirm: 'Are you sure to delete this?' } %></td>
+    </tr>
+    
+  <% end %>
+</table>
+<br>
+<%= link_to 'Send new Tweet', new_twee_path %> <br>
+<button onclick ="scrollFunction()">Go to Top</button>
+
+</body>
+<footer>
+  <p>Developped by: KAVUNA Paul</p>
+  <p>Contact information: <a href="https://mail.google.com/mail/u/0/?hl=en#inbox">
+  pkavuna@gmail.com</a>.</p>
+</footer>
+</html>

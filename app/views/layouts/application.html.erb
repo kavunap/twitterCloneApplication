@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TwitterApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <div class="navbar navbar-inverted navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        
+          <span class="icon-bar"><b>messages</span>
+          <span class="icon-bar">services</span>
+          <span class="icon-bar">about us</b></span>
+        
+  </head>
+
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

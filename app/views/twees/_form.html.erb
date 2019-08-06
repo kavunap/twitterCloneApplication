@@ -1,0 +1,20 @@
+<%= form_with(model: @twee, local: true ,url: choose_new_or_edit ) do |form| %>
+    <% if Twee.new.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= @twee.errors.count %>errors occurred.</h2>
+        <ul>
+  
+        <% @twee.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="twee_content">
+      <%= form.label :message %>
+      <%= form.text_field :content %>
+    </div>
+    <%= form.submit %>
+  <% end %>
+  
+  <%= link_to "Return to List of Tweets", twees_path %>
