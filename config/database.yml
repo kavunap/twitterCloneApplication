@@ -4,7 +4,11 @@ default: &default
   encoding: unicode
  
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+<<<<<<< HEAD
   template: template0
+=======
+
+>>>>>>> 7bced45a7c2ea725ad22c114babc786361e016e0
 development:
   <<: *default
   database: twitter_app_development

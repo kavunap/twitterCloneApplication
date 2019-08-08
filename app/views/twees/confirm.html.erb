@@ -8,7 +8,11 @@
   <p>Creation Date:<%= @twee.created_on %></p>
   <%= form.submit  "submit" %>
 <% end %>
+<<<<<<< HEAD
 <%= form_with(model: @twee, url: new_twee_path, local: true, method: 'get') do |form| %>
+=======
+<%= form_with(model: @twee, url: new_twee_path, method: 'get') do |form| %>
+>>>>>>> 7bced45a7c2ea725ad22c114babc786361e016e0
     <%= form.hidden_field :content %>
     <%= form.hidden_field :created_on %>
     <%= form.submit "back", name: 'back' %>

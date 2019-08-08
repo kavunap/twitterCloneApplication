@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // This is a manifest file that'll be compiled into application.js, which will
 // listed below.
 //
@@ -14,3 +15,13 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+=======
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("myBtn").style.display = "block";
+    } else {
+      document.getElementById("myBtn").style.display = "none";
+    }
+    document.documentElement.scrollTop = 0;
+  }
+>>>>>>> 7bced45a7c2ea725ad22c114babc786361e016e0

@@ -28,7 +28,10 @@ group :development, :test do
   gem 'pry-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
+<<<<<<< HEAD
   gem 'jquery-rails'
+=======
+>>>>>>> 7bced45a7c2ea725ad22c114babc786361e016e0
 end
 
 group :development do

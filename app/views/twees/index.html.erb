@@ -1,35 +1,67 @@
+<<<<<<< HEAD
 
+=======
+<html>
+>>>>>>> 7bced45a7c2ea725ad22c114babc786361e016e0
 <head>
 <meta charset = "UTF-8">
 <%= javascript_include_tag 'application' %>
 </head>
+<<<<<<< HEAD
 <%= render "layouts/navbar" %>
 <%= yield %>
 </head>
+=======
+<header><h1>WELCOME TO TWITTER CLONE APPLICATION</h1>
+<%= render "layouts/navbar" %>
+<%= yield %>
+</header>
+>>>>>>> 7bced45a7c2ea725ad22c114babc786361e016e0
 <body>
 <table class = "grid">
   <tr>
     <td>
+<<<<<<< HEAD
       <div class="grid-item"> <%= image_tag("p1.png") %> <br><p>john </p></div>
     </td>
     <td>
       <div class="grid-item"> <%= image_tag("p2.png") %><p>peter </p></div>
+=======
+      <div class="grid-item"> <img  src="assets/p1.png" > <br><p>john </p></div>
+    </td>
+    <td>
+      <div class="grid-item"> <img  src="assets/p2.png" ><p>peter </p></div>
+>>>>>>> 7bced45a7c2ea725ad22c114babc786361e016e0
     </td>
   </tr>
   <tr>
     <td>
+<<<<<<< HEAD
       <div class="grid-item"> <%= image_tag("p3.jpg") %><p>Yves </p></div>
     </td>
     <td>
       <div class="grid-item"><%= image_tag("p4.jpg") %> <p>Jacque </p></div>
+=======
+      <div class="grid-item"> <img  src="assets/p3.jpg" ><p>Yves </p></div>
+    </td>
+    <td>
+      <div class="grid-item"><img  src="assets/p4.jpg" > <p>Jacque </p></div>
+>>>>>>> 7bced45a7c2ea725ad22c114babc786361e016e0
     </td>
   </tr>
   <tr>
     <td>
+<<<<<<< HEAD
       <div class="grid-item"><%= image_tag("p5.jpg") %><p>David </p></div>
     </td>
     <td>
       <div class="grid-item"> <%= image_tag("p6.jpg") %><p>Paul </p></div>
+=======
+      <div class="grid-item"><img  src="assets/p6.jpg" ><p>David </p></div>
+    </td>
+    <td>
+      <div class="grid-item"> <img  src="assets/p8.jpg" ><p>Paul </p></div>
+>>>>>>> 7bced45a7c2ea725ad22c114babc786361e016e0
     <td>
   </tr>
 </table>
@@ -43,6 +75,7 @@
     <th colspan="3">more actions</th></th>
   </tr>
 
+<<<<<<< HEAD
   <% @twees.each do |twee| %>
     <tr>
       <td><%= twee.content %> </td>
@@ -51,6 +84,16 @@
       <td><%= link_to ' Edit Tweet ', edit_twee_path(twee.id) %></td>
       <td><%= link_to "Delete", twee_path(twee.id), :class => "btn btn-small btn-danger", method: :delete, data: {confirm: 'Are you sure?'} %></td>
       </tr>
+=======
+  <% Twee.all.each do |twee| %>
+    <tr>
+      <td><%= twee.content %></td>
+      <td><%=twee.created_on %></td>
+      <td><%= link_to ' View Tweet ', twee_path(twee.id) %></td>
+      <td><%= link_to ' Edit Tweet ', edit_twee_path(twee.id) %></td>
+      <td><%= link_to "Delete Tweet", twee_path(twee.id), method: :delete ,data: { confirm: 'Are you sure to delete this?' } %></td>
+    </tr>
+>>>>>>> 7bced45a7c2ea725ad22c114babc786361e016e0
     
   <% end %>
 </table>
@@ -59,4 +102,13 @@
 <button onclick ="scrollFunction()">Go to Top</button>
 
 </body>
+<<<<<<< HEAD
 </html>
+=======
+<footer>
+  <p>Developped by: KAVUNA Paul</p>
+  <p>Contact information: <a href="https://mail.google.com/mail/u/0/?hl=en#inbox">
+  pkavuna@gmail.com</a>.</p>
+</footer>
+</html>
+>>>>>>> 7bced45a7c2ea725ad22c114babc786361e016e0
